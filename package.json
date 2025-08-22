@@ -1,0 +1,19 @@
+{
+  "name": "ecommerce-fullstack",
+  "version": "1.0.0",
+  "description": "Full-stack e-commerce application",
+  "scripts": {
+    "dev": "concurrently \"npm run backend\" \"npm run frontend\" \"npm run admin\"",
+    "backend": "cd backend && npm run dev",
+    "frontend": "cd frontend && npm run dev",
+    "admin": "cd admin && npm run dev",
+    "install-all": "npm install && cd frontend && npm install && cd ../backend && npm install && cd ../admin && npm install",
+    "build": "cd frontend && npm run build && cd ../admin && npm run build"
+  },
+  "devDependencies": {
+    "concurrently": "^7.6.0"
+  },
+  "dependencies": {
+    "@tailwindcss/postcss": "^4.1.11"
+  }
+}
